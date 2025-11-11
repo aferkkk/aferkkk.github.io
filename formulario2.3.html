@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Formulario</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="http://ncoge.com/phps/formulario.php" method="post">
+
+        <table width="100%">
+            <tr>
+                <td width="50%" valign="top">
+                    
+                    <fieldset>
+                        <legend>Datos personales:</legend>
+
+                        <div>
+                            <label for="nombre">Nombre:</label><br>
+                            <input type="text" id="nombre" name="nombre" value="Alejandro" size="40">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="apellidos">Apellidos:</label><br>
+                            <input type="text" id="apellidos" name="apellidos" value="Fernández" size="40">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="correo">Correo:</label><br>
+                            <input type="email" id="correo" name="correo" value="alefercan6@alu.edu.gva.es" size="40">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="hobbies">Hobbies:</label><br>
+                            <textarea id="hobbies" name="hobbies" rows="4" cols="38">¿Cúales son tus hobbies?</textarea>
+                        </div>
+                    </fieldset>
+
+                </td>
+
+                <td width="50%" valign="top">
+
+                    <fieldset>
+                        <legend>Idiomas</legend>
+                        <p>Puntúa tu nivel de idiomas de 1 a 5:</p>
+
+                        <div>
+                            <strong>Inglés:</strong>
+                            <input type="radio" id="ingles1" name="ingles" value="1" checked> <label for="ingles1">1</label>
+                            <input type="radio" id="ingles2" name="ingles" value="2"> <label for="ingles2">2</label>
+                            <input type="radio" id="ingles3" name="ingles" value="3"> <label for="ingles3">3</label>
+                            <input type="radio" id="ingles4" name="ingles" value="4"> <label for="ingles4">4</label>
+                            <input type="radio" id="ingles5" name="ingles" value="5"> <label for="ingles5">5</label>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <strong>Francés:</strong>
+                            <input type="radio" id="frances1" name="frances" value="1" checked> <label for="frances1">1</label>
+                            <input type="radio" id="frances2" name="frances" value="2"> <label for="frances2">2</label>
+                            <input type="radio" id="frances3" name="frances" value="3"> <label for="frances3">3</label>
+                            <input type="radio" id="frances4" name="frances" value="4"> <label for="frances4">4</label>
+                            <input type="radio" id="frances5" name="frances" value="5"> <label for="frances5">5</label>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <strong>Alemán:</strong>
+                            <input type="radio" id="aleman1" name="aleman" value="1" checked> <label for="aleman1">1</label>
+                            <input type="radio" id="aleman2" name="aleman" value="2"> <label for="aleman2">2</label>
+                            <input type="radio" id="aleman3" name="aleman" value="3"> <label for="aleman3">3</label>
+                            <input type="radio" id="aleman4" name="aleman" value="4"> <label for="aleman4">4</label>
+                            <input type="radio" id="aleman5" name="aleman" value="5"> <label for="aleman5">5</label>
+                         <br>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Domino los siguientes programas:</legend>
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" id="writer" name="programas" value="writer" checked> <label for="writer">Writer</label></td>
+                                <td><input type="checkbox" id="base" name="programas" value="base" checked> <label for="base">Base</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="calc" name="programas" value="calc"> <label for="calc">Calc</label></td>
+                                <td><input type="checkbox" id="impress" name="programas" value="impress"> <label for="impress">Impress</label></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Trabajo con el siguiente Sistema Operativo:</legend>
+                        <select id="so" name="so">
+                            <option value="linux" selected>Linux</option>
+                            <option value="windows">Windows</option>
+                            <option value="macos">MacOS</option>
+                            <option value="otro">Otro...</option>
+                        </select>
+                    </fieldset>
+
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        
+        <input type="reset" value="Reinicio">
+
+    </form>
+</html>     
