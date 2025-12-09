@@ -1,20 +1,63 @@
 body {
+    background-color: lightblue;
 
 }
 
 h1 {
-
+    border-bottom: 5px solid black;
 }
 
 img {
+   border: 5px solid black;
+   margin-right: 60px;
 
 }
 
-ul {
+p {
+    border: 5px dashed black;
+}
+
+#text{
+    width: 90%;
+    margin-left: 5px;
+    margin-right: 5px;
 
 }
 
-li {
+#text p{
+    border: 5px dashed black;
+    box-shadow: 10px 5px 5px black;
+    text-indent: 40px;
+    padding: 10px;
+    background-color: yellowgreen;
+}
 
+#text p :last-child{
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#menu li{
+    display: inline;
+    border-left: 5px red solid;
+    padding: 5px;
+
+}
+
+footer{
+    border-top: 5px solid black;
+}
+
+image{
+    text-align: right;
+}
+
+@media all and (max-width: 500px){
+    img{
+        border: red solid 5px;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 90%;
+    }
 }
 
