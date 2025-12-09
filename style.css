@@ -11,3 +11,12 @@ fieldset {
     border-radius: 10px;
     background-color: greenyellow;
 }
+
+h1 {
+    color: darkblue;
+    background-color: lightgreen;
+}
+
+li {
+    color: darkred;
+}
