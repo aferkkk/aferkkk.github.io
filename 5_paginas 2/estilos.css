@@ -1,0 +1,40 @@
+body {
+   background-image: url(/p4/images/fondo.jpg);
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: top center;
+   text-align: center;
+}
+
+
+h1 {
+   background-color: #4e000d;
+   color: white;
+   border-left-width: 10px;
+   border-left-style: solid;
+   border-left-color: white;
+}
+
+
+img {
+   border: 10px yellow solid;
+   border-radius: 25px;
+   box-shadow: 10px 5px 5px black;
+   height: 500px;
+}
+
+
+ul {
+   list-style-type: none;
+}
+
+
+li {
+   display: inline;
+   border: 2px yellow solid;
+}
+
+
+a {
+   color: white;
+}
