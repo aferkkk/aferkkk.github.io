@@ -1,0 +1,209 @@
+* {
+  margin: 0px auto;
+  box-sizing: border-box;
+}
+
+body {
+
+  background: url('textura.jpg'); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; 
+  font-family: 'arial', sans-serif;
+  padding-bottom: 60px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+img {
+  border: dashed 5px #097054;
+  margin: 10px;
+  max-width: 100%; 
+  padding: 20px;          /* Crea espacio entre la foto y el borde */
+  background-color: white; /* Rellena ese espacio de blanco */
+  box-sizing: border-box;  /* Mantiene el tamaño controlado */
+  display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+header {
+
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000; 
+  background-color: #0D5716;
+  border-bottom: 5px solid #1B6925;
+}
+
+#menu {
+  list-style-type: none; 
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+
+#menu li {
+  display: inline; 
+  padding: 0 15px;
+}
+
+#menu li a {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 1.2em;
+  color: white;
+}
+
+
+#menu li a:hover {
+  background-color: #98EBA3;
+  text-decoration: underline;
+  color: #B6BFB7; 
+}
+
+
+#Scuffers {
+  margin-top: 80px; 
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 5px solid #263B2A;
+  border-bottom: 5px solid #263B2A;
+  padding: 20px;
+}
+
+
+#galleta {
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  
+  width: 50%;
+  background-color: white;
+  border: 5px solid #013006;
+  box-shadow: 2px 2px 50px black;
+  text-align: center;
+  padding: 20px;
+  z-index: 2000; 
+}
+
+#galleta .button {
+    background-color: #097054;
+    color: greenyellow;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#chicha {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+  overflow: hidden; 
+}
+
+#scuffersLogo {
+  float: right;
+  width: 40%;
+  text-align: center;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  border: none;
+  padding: 10px;
+}
+
+#withlove {
+  float: left;
+  width: 40%;
+  text-align: center;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  clear: both; 
+  border: none;
+  padding: 10px;
+}
+
+#TextoNoticia, #TextoPrincipal {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+#sideMenu {
+
+  position: fixed;
+  right: 0px;
+  top: 150px;
+  width: 60px;
+  
+  background-color: #013006;
+  border: 2px solid #097054;
+  padding: 5px;
+  text-align: center;
+  z-index: 900;
+}
+
+#sideMenu img {
+  width: 40px; 
+  border: none; 
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+
+#footer {
+  width: 100%;
+  background-color: #0D5716;
+  text-align: center;
+  color: white;
+  border-top: 5px solid black;
+  padding: 10px 0;
+  z-index: 1000;
+
+}
+
+@media all and (max-width: 600px) {
+  
+  #scuffersLogo, #withlove {
+     float: none;
+     width: 100%;
+     margin: 10px 0;
+  }
+  
+  #header {
+    margin-top: 0;
+  }
+  
+  #Scuffers {
+    margin-top: 100px; 
+  }
+
+  #sideMenu {
+    position: static; 
+    width: 100%;
+    margin-top: 20px;
+    background-color: #333;
+    display: block;
+    clear: both; 
+    padding: 10px;
+  }
+  
+  #sideMenu img {
+    display: inline-block; 
+    width: 50px;
+    margin: 5px 15px;
+  }
+}
