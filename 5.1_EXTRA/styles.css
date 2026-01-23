@@ -22,9 +22,9 @@ img {
   border: dashed 5px #097054;
   margin: 10px;
   max-width: 100%; 
-  padding: 20px;          /* Crea espacio entre la foto y el borde */
-  background-color: white; /* Rellena ese espacio de blanco */
-  box-sizing: border-box;  /* Mantiene el tamaño controlado */
+  padding: 20px;          
+  background-color: white; 
+  box-sizing: border-box;  
   display: block;
 }
 
@@ -113,6 +113,8 @@ header {
   margin-top: 20px;
   border: 2px solid black;
   overflow: hidden; 
+  margin-bottom: 80px;
+  margin-top: 130px;
 }
 
 #scuffersLogo {
