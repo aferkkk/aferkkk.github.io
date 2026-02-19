@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.tarjeta {
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    border: 1px solid #ddd;
+    overflow: hidden; 
+}
+
+.cabecera_tarjeta {
+    background-color: lightsteelblue; 
+    padding: 30px 20px;
+}
+
+.foto_perfil {
+    display: flex; 
+    align-items: center; 
+}
+
+.foto_perfil img {
+    width: 80px;     
+    height: 80px;      
+    border-radius: 50%; 
+    object-fit: cover;  
+    margin-right: 20px; 
+}
+
+.nombre h2 {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.nombre p {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.cuerpo_tarjeta {
+    padding: 20px;
+}
+
+.bio {
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.seguidores {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.cantidad_perfil {
+    text-align: center;
+}
+
+.cantidad_perfil strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.cantidad_perfil p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 2px;
+}
+
+.acciones {
+    display: flex;
+    gap: 15px; 
+}
+
+.btn {
+    flex: 1; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn:first-child {
+    background-color: #4a90e2;
+    color: white;
+}
+.btn:first-child:hover {
+    background-color: #357abd;
+}
+
+.btn:last-child {
+    background-color: #f0f0f0;
+    color: #333;
+}
+.btn:last-child:hover {
+    background-color: #e0e0e0;
+}

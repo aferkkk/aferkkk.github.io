@@ -1,0 +1,31 @@
+.padre {
+    border: 5px solid black;
+    display: flex;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hijo{
+    border: 2px solid red;
+    flex-basis: 200px;
+}
+
+.uno{
+    background-color: yellow;
+}
+
+.dos{
+    background-color: cyan;
+}
+
+.menu {
+    display: flex;
+    border: 2px solid blue;
+    justify-content: right;
+}
+
+img{
+    width: 30px;
+    border: red solid 2px;
+}
