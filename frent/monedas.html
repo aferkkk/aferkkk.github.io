@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Conversor de moneda</title>
+</head>
+    <body>
+
+        <h1>Moneda</h1>
+        <input type="number" id="cantidad" placeholder="Cantidad en EUR">
+        <input type="button" id="boton" value="Convertir">
+        <div id="resultado"></div>
+
+        <script>
+        let url = "https://api.frankfurter.dev/v1/latest?base=EUR";
+        let boton = document.getElementById("boton");
+        let resultado = document.getElementById("resultado");
+        let inputCantidad = document.getElementById("cantidad");
+
+        function leerMoneda() {
+        let cantidad = parseFloat(inputCantidad.value);
+
+        if (isNaN(cantidad)) {
+        resultado.textContent = "Introduce una cantidad válida";
+        return;
+        }   
+
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+        console.log(data);
+
+        let html = `<p>${cantidad} EUR equivalen a:</p>`;
+
+        for (let moneda in data.rates) {
+        let valor = (cantidad * data.rates[moneda]).toFixed(2);
+        html += `<p>${moneda}: ${valor}</p>`;
+        }
+
+        resultado.innerHTML = html;
+        })
+        .catch(error => {
+        console.log("error", error);
+        resultado.textContent = "Error al obtener datos";
+        });
+        }
+
+        boton.addEventListener("click", () => {
+        leerMoneda();
+        });
+        </script>
+
+    </body>
+</html>

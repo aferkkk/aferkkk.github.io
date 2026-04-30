@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Piedra Papel Tijera Lagarto Spock</title>
+</head>
+<body>
+
+<h1>Piedra Papel Tijera Lagarto Spock</h1>
+
+<div>
+<button onclick="jugar('piedra')">Piedra</button>
+<button onclick="jugar('papel')">Papel</button>
+<button onclick="jugar('tijera')">Tijera</button>
+<button onclick="jugar('lagarto')">Lagarto</button>
+<button onclick="jugar('spock')">Spock</button>
+</div>
+
+<div id="resultado"></div>
+
+<script>
+const opciones = ["piedra", "papel", "tijera", "lagarto", "spock"];
+
+const reglas = {
+piedra: ["tijera", "lagarto"],
+papel: ["piedra", "spock"],
+tijera: ["papel", "lagarto"],
+lagarto: ["spock", "papel"],
+spock: ["tijera", "piedra"]
+};
+
+const resultado = document.getElementById("resultado");
+
+function jugar(eleccionJugador) {
+resultado.textContent = "Esperando resultado...";
+
+// PROMESA con setTimeout (5 segundos)
+new Promise((resolve) => {
+setTimeout(() => {
+const eleccionOrdenador = opciones[Math.floor(Math.random() * opciones.length)];
+resolve(eleccionOrdenador);
+}, 5000);
+}).then((eleccionOrdenador) => {
+quienGana(eleccionJugador, eleccionOrdenador);
+});
+}
+
+// decide quien gana
+function quienGana(jugador, ordenador) {
+let mensaje = "";
+console.log("jugador: ", jugador, " ordenador: ", ordenador);
+
+if (!jugador || !ordenador) {
+mensaje = "Faltan opciones para determinar el ganador.";
+} else if (jugador === ordenador) {
+mensaje = `JUGADOR: ${jugador} VS ORDENADOR: ${ordenador} ==> Empate!`;
+} else if (reglas[jugador] && reglas[jugador].includes(ordenador)) {
+mensaje = `JUGADOR: ${jugador} VS ORDENADOR: ${ordenador} ==> Ganaste!`;
+} else if (reglas[ordenador] && reglas[ordenador].includes(jugador)) {
+mensaje = `JUGADOR: ${jugador} VS ORDENADOR: ${ordenador} ==> Perdiste!`;
+} else {
+mensaje = "Error en las reglas del juego.";
+}
+
+resultado.textContent = mensaje;
+}
+</script>
+</body>
+</html>
