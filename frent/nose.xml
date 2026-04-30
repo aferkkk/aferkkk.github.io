@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF=8"?>
+<alumno>
+    <alumno nombre="Pepe">
+        Este alumno seduere en clse
+        edad <18
+        <dni>12345678</dni>
+        <!--Esto es un comentario>
